@@ -16,6 +16,6 @@ class Doctor
     Appointment.all.select {|appointment| appointment.doctor == self}
   end
   def patients
-    (appointments.collect {|patient| patient.doctor == self}).uniq
+    (appointments.collect {|appointment| appointment.patient }).uniq
   end
 end
