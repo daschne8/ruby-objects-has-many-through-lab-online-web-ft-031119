@@ -13,7 +13,7 @@ class Artist
     Song.new(title,self,genre)
   end
   def songs
-    Song.all.select {|song| song.artist == @name}
+    Song.all.select {|song| song.artist == self}
   end
   def genres
     (songs.collect {|song| song.genre}).uniq
