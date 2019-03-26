@@ -10,7 +10,7 @@ class Genre
     @@all
   end
   def songs
-    Song.all.select {|song| song.genre = @name}
+    Song.all.select {|song| song.genre == @name}
   end
   def artists
 
